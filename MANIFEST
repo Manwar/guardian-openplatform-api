@@ -3,5 +3,6 @@ Makefile.PL
 Build.PL
 MANIFEST
 README
-t/00-load.t
+t/01-basic.t
 lib/Guardian/OpenPlatform/API.pm
+META.yml
