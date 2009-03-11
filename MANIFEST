@@ -1,0 +1,7 @@
+Changes
+Makefile.PL
+Build.PL
+MANIFEST
+README
+t/00-load.t
+lib/Guardian/OpenPlatform/API.pm
