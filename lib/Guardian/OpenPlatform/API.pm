@@ -205,8 +205,6 @@ This is really just a simple proof of concept. It will get better, I promise.
 
 =head1 BUGS, REQUESTS, COMMENTS
 
-BUGS, REQUESTS, COMMENTS
-
 Support for this module is supplied using the CPAN RT system via the web or 
 email:
 
