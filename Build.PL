@@ -5,7 +5,7 @@ my $build = Module::Build->new(
                                dist_version => '0.01',
 			       license     => 'perl',
 			       requires    => {
-                                 'perl'                => '5.006',
+                                 'perl'                => '5.008001',
                                  'LWP::UserAgent'      => '2.023',
                                  'Moose'               => '0',
                                },
