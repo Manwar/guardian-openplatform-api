@@ -2,7 +2,7 @@ use Module::Build;
 
 my $build = Module::Build->new(
 			       module_name => 'Guardian::OpenPlatform::API',
-                               dist_version => '0.01',
+                               dist_version => '0.02',
 			       license     => 'perl',
 			       requires    => {
                                  'perl'                => '5.008001',
