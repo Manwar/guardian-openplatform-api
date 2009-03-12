@@ -55,12 +55,6 @@ has 'format' => (
     default => 'json',
     );
 
-sub BUILD {
-    my $self = shift;
-
-    $self->{ua} = LWP::UserAgent->new;
-}
-
 =head1 METHODS
 
 =head2 new({ api_key => $key [, format => '(xml|json)'] })
@@ -130,6 +124,12 @@ sub content {
     $self->$method($args);
 }
 
+=head2 search({ qry => $query, [ filter => $filter, format => $fmt ] });
+
+Currently does the same as C<content>. Will get more complex though.
+
+=cut
+
 sub search {
     my $self = shift;
 
@@ -155,6 +155,18 @@ sub search {
     $url .= '&api_key=' . $self->api_key;
 
     my $resp = $self->{ua}->get($url);
+}
+
+=head2 BUILD
+
+Standard Moose BUILD method. You shouldn't need to call this.
+
+=cut
+
+sub BUILD {
+    my $self = shift;
+
+    $self->{ua} = LWP::UserAgent->new;
 }
 
 =head1 TODO
