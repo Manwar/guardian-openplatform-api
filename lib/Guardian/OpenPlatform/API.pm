@@ -110,7 +110,25 @@ This method returns an HTTP::Response object.
 
 =cut
 
+my %dispatch = (
+    search => \&search,
+);
+
 sub content {
+    my $self = shift;
+
+    my $args = shift;
+
+    my $mode = $args->{mode} || 'search';
+
+    croak "Invalid mode '$mode'" unless exists $dispatch{$mode};
+
+    my $method = $dispatch{$mode};
+
+    $self->$method($args);
+}
+
+sub search {
     my $self = shift;
 
     my $args = shift;
