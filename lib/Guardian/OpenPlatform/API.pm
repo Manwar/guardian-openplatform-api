@@ -26,6 +26,8 @@ get a key from the OpenPlatform web site.
 
 package Guardian::OpenPlatform::API;
 
+use strict;
+use warnings;
 use 5.006000;
 
 use Moose;
