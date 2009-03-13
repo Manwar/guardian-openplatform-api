@@ -34,7 +34,7 @@ use Moose;
 use LWP;
 use Carp;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 my $base_url = 'http://api.guardianapis.com/';
 
