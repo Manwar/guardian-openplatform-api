@@ -109,6 +109,7 @@ This method returns an HTTP::Response object.
 my %dispatch = (
     search => \&search,
     tags   => \&tags,
+    item   => \&item,
 );
 
 sub content {
@@ -181,6 +182,28 @@ sub tags {
 
     $url .= $params ? '&' : '?';
     $url .= "format=$fmt";
+
+    $url .= '&api_key=' . $self->api_key;
+
+    my $resp = $self->{ua}->get($url);
+}
+
+=head2 item
+
+Returns a content item given its id.
+
+=cut
+
+sub item {
+    my $self = shift;
+
+    my $args = shift;
+
+    my $url = $base_url . "content/item/$args->{item}";
+
+    my $fmt = $args->{format} || $self->format;
+
+    $url .= "?format=$fmt";
 
     $url .= '&api_key=' . $self->api_key;
 
