@@ -1,5 +1,10 @@
 Revision history for Guardian::OpenPlatform::API
 
+0.07  2016-04-20 MANWAR
+      - Downgraded to use Moo.
+      - Added standard load test script (t/00-load.t).
+      - Removed '+x' attributes from some of the test scripts.
+
 0.06  2016-04-12 MANWAR
       * Updated endpoint for API.
       * Updated param name for api key i.e. 'api-key'.

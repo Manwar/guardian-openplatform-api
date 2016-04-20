@@ -4,6 +4,7 @@ Build.PL
 MANIFEST
 README
 lib/Guardian/OpenPlatform/API.pm
+t/00-load.t
 t/01-basic.t
 t/02-pod.t
 t/03-pod_coverage.t

@@ -30,29 +30,29 @@ use strict;
 use warnings;
 use 5.006000;
 
-use Moose;
+use Moo;
+use namespace::clean;
+
 use LWP;
 use Carp;
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 my $base_url = 'http://content.guardianapis.com/';
 
 has 'ua' => (
     is => 'rw',
-    isa => 'LWP::UserAgent',
+    isa => sub { die 'Need LWP::UserAgent object' unless (ref($_[0]) eq 'LWP::UserAgent'); }
     );
 
 has 'api_key' => (
     is => 'rw',
-    isa => 'Str',
     required => 1,
     );
 
 has 'format' => (
     is => 'rw',
-    isa => 'Str',
-    default => 'json',
+    default => sub { 'json' },
     );
 
 =head1 METHODS

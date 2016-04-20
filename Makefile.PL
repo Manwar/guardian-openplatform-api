@@ -16,8 +16,10 @@ WriteMakefile(
     BUILD_REQUIRES   => {
         'Test::More' => '1.001014',
     },
-    PREREQ_PM            => {
-        'LWP::UserAgent' => '2.023',
+    PREREQ_PM              => {
+        'Moo'              => '2.000000',
+        'namespace::clean' => '0.24',
+        'LWP::UserAgent'   => '2.023',
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'Guardian-OpenPlatform-API-*' },
