@@ -36,7 +36,7 @@ use namespace::clean;
 use LWP;
 use Carp;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 my $base_url = 'http://content.guardianapis.com/';
 
