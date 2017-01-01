@@ -25,6 +25,9 @@ WriteMakefile(
     clean => { FILES => 'Guardian-OpenPlatform-API-*' },
     (eval { ExtUtils::MakeMaker->VERSION(6.46) } ? (META_MERGE => {
         'meta-spec' => { version => 2 },
+        provides    => {
+            'Guardian::OpenPlatform::API' => { file => 'lib/Guardian/OpenPlatform/API.pm', version => '0.09' },
+        },
         resources => {
             repository => {
                 type => 'git',
